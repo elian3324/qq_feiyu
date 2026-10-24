@@ -1,0 +1,13 @@
+{
+  "name": "qq-ai-bot-open-source",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "Configurable OneBot QQ AI bot with memory, media, diary and optional autonomy",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "start": "node --env-file=.env local/run.mjs",
+    "audit:static": "python -B scripts/static_audit.py"
+  }
+}

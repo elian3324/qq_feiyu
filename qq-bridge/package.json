@@ -1,0 +1,8 @@
+{
+  "name": "qq-bot-media-helpers",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "MIT media helpers retained from qq-bridge; upstream notices are in LICENSE."
+}

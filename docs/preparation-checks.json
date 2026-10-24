@@ -1,0 +1,21 @@
+{
+  "copied_runtime_packages": [
+    "companion",
+    "own-life",
+    "phone-mcp",
+    "qzone-mcp"
+  ],
+  "sanitized_source_files": [
+    "ai-companion-kit/.gitattributes",
+    "ai-companion-kit/packages/companion/src/identity-review.js",
+    "ai-companion-kit/packages/companion/src/qq-faces.json",
+    "ai-companion-kit/packages/phone-mcp/src/phone-mcp.js",
+    "local/diary-tools.mjs"
+  ],
+  "source_static_file_count": 379,
+  "known_credential_values_checked": 2,
+  "known_identity_values_checked": 3,
+  "source_fingerprint_unchanged": true,
+  "reference_value_findings": 0,
+  "private_role_overlap_files": []
+}

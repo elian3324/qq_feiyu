@@ -1,0 +1,36 @@
+{
+  "name": "qzone-mcp",
+  "version": "0.1.0",
+  "description": "让 AI 自己发 QQ 空间说说的 MCP 服务器：发说说、看好友动态、点赞、评论（删除和拉黑故意不提供）",
+  "type": "module",
+  "main": "src/qzone-mcp.js",
+  "bin": {
+    "qzone-mcp": "src/qzone-mcp.js"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node src/qzone-mcp.js",
+    "selftest": "node src/qzone-mcp.js --selftest"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "qzone",
+    "qq",
+    "onebot",
+    "snowluma",
+    "ai-agent",
+    "companion"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  }
+}

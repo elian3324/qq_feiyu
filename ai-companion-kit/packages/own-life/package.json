@@ -1,0 +1,12 @@
+{
+  "name": "@companion/own-life",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "她自己的生活：定时静默唤醒（不进聊天）",
+  "main": "src/own-life.js",
+  "scripts": {
+    "test": "node test/own-life.test.mjs"
+  },
+  "license": "MIT"
+}

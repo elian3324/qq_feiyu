@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checks": {
+    "files": 87,
+    "json_parsed": 17,
+    "python_ast_parsed": 2,
+    "javascript_syntax_parsed": 47,
+    "required_files": 13,
+    "gitignore_cases": 35
+  },
+  "issues": [],
+  "scope": "static file parsing only; no project execution, installation or network access"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "companion-media-runtime",
+  "private": true,
+  "type": "module",
+  "dependencies": {"silk-wasm": "3.6.1"}
+}

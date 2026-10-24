@@ -1,0 +1,10 @@
+[
+  {
+    "id": "greeting",
+    "file": "greeting.png",
+    "source": "local",
+    "tags": ["问候"],
+    "description": "自行提供、具有使用权限的问候图片",
+    "audience": ["owner", "private", "group"]
+  }
+]

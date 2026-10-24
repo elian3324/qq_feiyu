@@ -1,0 +1,183 @@
+{
+  "apiKey": "",
+  "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "model": "qwen3-vl-plus",
+  "modelOptions": {
+    "enable_thinking": false
+  },
+  "roleCard": "./role.md",
+  "roleMaxChars": 12000,
+  "names": [
+    "小助手"
+  ],
+  "keywords": [
+    "小助手"
+  ],
+  "ownerIds": [],
+  "botQQ": "",
+  "allow": {
+    "private": [],
+    "groups": []
+  },
+  "groupIdentityReview": true,
+  "ownerMemory": true,
+  "onebot": {
+    "wsUrl": "ws://127.0.0.1:3001",
+    "httpUrl": "http://127.0.0.1:3000",
+    "accessToken": ""
+  },
+  "wake": {
+    "ownerAlwaysWake": true,
+    "groupAtOnly": true,
+    "probability": 0,
+    "ambientCooldownMs": 45000,
+    "privateWindowMs": 1500,
+    "groupWindowMs": 6000
+  },
+  "humanize": {
+    "enabled": true,
+    "msPerChar": 85,
+    "minMs": 1200,
+    "maxMs": 6000,
+    "jitter": 0.2,
+    "burstMax": 4,
+    "gapRange": [
+      700,
+      1500
+    ]
+  },
+  "dataDir": "./data",
+  "diaryDir": "./data/diary",
+  "diaryMaxChars": 2000,
+  "diary": {
+    "enabled": false,
+    "time": "22:30",
+    "timezone": "Asia/Shanghai"
+  },
+  "toolModule": "../../../local/features.mjs",
+  "autonomyModule": "../../../local/autonomy.mjs",
+  "vision": {
+    "enabled": true,
+    "mode": "native",
+    "gifFrames": 4,
+    "maxImages": 4,
+    "downloadRoots": []
+  },
+  "voice": {
+    "enabled": false,
+    "mode": "bailian",
+    "model": "qwen3-tts-flash",
+    "voice": "Cherry",
+    "endpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+    "apiKey": ""
+  },
+  "asr": {
+    "enabled": false,
+    "model": "qwen3-asr-flash",
+    "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "apiKey": "",
+    "maxBytes": 12582912,
+    "maxSeconds": 180
+  },
+  "video": {
+    "enabled": false,
+    "maxBytes": 41943040,
+    "frames": 8,
+    "transcribeAudio": true,
+    "maxSeconds": 180
+  },
+  "attachments": {
+    "enabled": false,
+    "maxBytes": 20971520,
+    "maxChars": 20000,
+    "maxPages": 50,
+    "scanPages": 6,
+    "python": "python",
+    "maxPerTurn": 3
+  },
+  "stickers": {
+    "enabled": true,
+    "preferQQ": true,
+    "localAfterQQ": 5,
+    "library": "data/stickers/library.json",
+    "privateMaxPerHour": 12,
+    "groupMaxPerHour": 6,
+    "globalMaxPerHour": 30,
+    "qqFavorites": {
+      "enabled": false,
+      "autoCollect": false,
+      "backgroundCollect": false,
+      "learnPerSync": 5,
+      "maxFavorites": 100,
+      "maxCollectPerDay": 10,
+      "maxAssessPerDay": 20
+    }
+  },
+  "phone": {
+    "enabled": false
+  },
+  "qzone": {
+    "enabled": false,
+    "httpUrl": "",
+    "accessToken": "",
+    "actions": {}
+  },
+  "autonomy": {
+    "timezone": "Asia/Shanghai",
+    "dryRun": true,
+    "paused": true,
+    "stateFile": "data/autonomy-state.json",
+    "checkIntervalSeconds": 60,
+    "chat": {
+      "enabled": false,
+      "dryRun": true,
+      "maxPerDay": 2,
+      "minIntervalHours": 4,
+      "ownerInactivityHours": 0.5,
+      "activeStart": "09:00",
+      "activeEnd": "23:00",
+      "wakeMinutes": [
+        30,
+        90
+      ],
+      "busyQuietHours": 8,
+      "dailyLimitEnabled": true,
+      "cooldownEnabled": true,
+      "minIntervalMinutes": 30,
+      "ownerIdleMinutes": 30
+    },
+    "qzone": {
+      "enabled": false,
+      "publishEnabled": false,
+      "readOwnerEnabled": false,
+      "commentEnabled": false,
+      "replyEnabled": false,
+      "likeEnabled": false,
+      "maxPerDay": 1,
+      "maxPerWeek": 3,
+      "minPostIntervalHours": 20,
+      "activeStart": "10:00",
+      "activeEnd": "22:00",
+      "visibility": 4,
+      "publicTopics": [
+        "阅读",
+        "音乐",
+        "日常想法"
+      ],
+      "wakeMinutes": [
+        30,
+        90
+      ],
+      "pollIntervalSeconds": 300,
+      "maxCommentsPerDay": 3,
+      "maxRepliesPerDay": 6,
+      "maxLikesPerDay": 5,
+      "minInteractionIntervalMinutes": 10,
+      "threadCooldownMinutes": 30,
+      "maxPerThreadPerDay": 6,
+      "maxEventAgeHours": 24,
+      "interactionDailyLimitEnabled": true,
+      "activeHoursEnabled": true
+    }
+  }
+}
