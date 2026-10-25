@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>小助手 · QQ 客户端登录</title>
+  <style>
+    :root{font-family:"Microsoft YaHei",system-ui,sans-serif;color:#253247;background:#f2f5fa;color-scheme:light}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px}
+    main{width:min(100%,580px);padding:36px;background:white;border:1px solid #dde5ef;border-radius:20px;box-shadow:0 12px 40px #20304a0c}
+    .tag{color:#526d9f;font-size:14px}h1{font-size:26px;line-height:1.4;margin:12px 0 22px}p{font-size:16px;line-height:1.85;margin:14px 0}
+    .status{padding:16px;border-radius:12px;background:#eef3ff;font-size:15px;line-height:1.7;margin:24px 0;color:#2f4c87}
+    button{border:0;border-radius:10px;padding:12px 24px;background:#315ed7;color:white;font:inherit;cursor:pointer}button:disabled{opacity:.6;cursor:wait}
+    small{display:block;color:#65748a;line-height:1.8;margin-top:20px}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="tag">小助手 · 登录检查</div>
+    <h1>请在电脑 QQ 窗口中登录</h1>
+    <p>找到电脑上已经打开的 <strong>QQ 登录窗口</strong>，选择<strong>机器人小号</strong>，按 QQ 窗口的提示登录。需要扫码时，用小号扫码并在手机上确认。</p>
+    <p>登录二维码由电脑 QQ 客户端显示。这个管理网页只检查状态，登录成功后会自动进入管理面板。</p>
+    <div id="status" class="status" role="status" aria-live="polite">正在检查 QQ 登录状态…</div>
+    <button id="recheck" type="button">重新检查</button>
+    <small>找不到 QQ 窗口时，请查看任务栏中的 QQ 图标。请保持这个网页和 QQ 窗口打开。</small>
+  </main>
+  <script type="module">
+    const status = document.getElementById('status');
+    const button = document.getElementById('recheck');
+    let checking = false;
+    async function request(url, headers = {}) {
+      const response = await fetch(url, {
+        method: 'POST', headers, credentials: 'same-origin', cache: 'no-store',
+        signal: AbortSignal.timeout(4000),
+      });
+      if (!response.ok) throw new Error('unavailable');
+      return response.json();
+    }
+    async function check() {
+      if (checking) return;
+      checking = true;
+      button.disabled = true;
+      try {
+        const session = await request('/api/local-session', { 'X-NapCat-Local-Login': '1' });
+        const credential = session?.data?.Credential;
+        if (session.code !== 0 || typeof credential !== 'string' || !credential) throw new Error('unavailable');
+        const state = await request('/api/QQLogin/CheckLoginStatus', { authorization: 'Bearer ' + credential });
+        if (state.code !== 0) throw new Error('unavailable');
+        if (state.data?.isLogin === true && state.data?.coreReady === true) {
+          status.textContent = 'QQ 与机器人已连接，正在进入管理面板…';
+          location.replace('/webui/');
+          return;
+        }
+        if (state.data?.qrLoginAccepted === true || ['initializing', 'qrcode_scanned'].includes(state.data?.loginPhase)) {
+          status.textContent = '已收到登录确认，正在等待 QQ 与机器人完成连接，请稍候。';
+        } else {
+          status.textContent = '正在等待 QQ 登录并完成连接。请在电脑 QQ 窗口选择机器人小号，按窗口提示继续。';
+        }
+      } catch {
+        status.textContent = '管理服务暂未连接，稍后会自动检查。请保持电脑 QQ 窗口打开。';
+      } finally {
+        checking = false;
+        button.disabled = false;
+      }
+    }
+    button.addEventListener('click', check);
+    setInterval(check, 5000);
+    globalThis.navigator?.serviceWorker?.register('/webui/sw.js', { scope: '/webui/', updateViaCache: 'none' }).catch(() => {});
+    await check();
+  </script>
+</body>
+</html>

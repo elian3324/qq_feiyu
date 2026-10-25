@@ -26,6 +26,9 @@
 !**/roles/*.example.md
 **/initial-prompts.json
 MCP*.json
+!MCP*.example.json
+private-adapters/
+local-resources/
 
 # Runtime, conversations, memories, media, sessions, state and generated content
 **/data/
@@ -60,6 +63,7 @@ MCP*.json
 id_rsa
 id_ed25519
 .npmrc
+!qq-bridge/.npmrc
 .netrc
 .pypirc
 .ssh/
@@ -117,6 +121,12 @@ __pycache__/
 .DS_Store
 Thumbs.db
 .audit-*/
+_restore_release.py
+_restore_baseline.json
+_restore*.py
+_restore*.json
+_complete_restore.py
+_finalize_parity.py
 _prepare_release.py
 _source_manifest.json
 _preparation_summary.json

@@ -1,0 +1,23 @@
+{
+  "name": "@ai-companion-kit/qzone",
+  "version": "1.0.0",
+  "description": "一键开通「她自己发 QQ 空间」——往角色卡里加一段话，让她知道什么时候该发",
+  "type": "module",
+  "bin": {
+    "qzone-open": "./open-zone.mjs"
+  },
+  "scripts": {
+    "dry": "node open-zone.mjs --dry",
+    "open": "node open-zone.mjs"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "ai-companion",
+    "qzone",
+    "qq",
+    "mcp"
+  ]
+}

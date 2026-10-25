@@ -5,6 +5,8 @@ import { applyEnvironment } from '../ai-companion-kit/packages/companion/src/con
 const root=fileURLToPath(new URL('../',import.meta.url));
 const config=process.env.COMPANION_CONFIG || path.join(root,'ai-companion-kit/packages/companion/config.json');
 const cfg=applyEnvironment(JSON.parse(fs.readFileSync(config,'utf8').replace(/^\uFEFF/,'')));
+const service=process.argv[2];
+if(!['phone','qzone'].includes(service)||cfg[service]?.enabled!==true)throw new Error('请先在本地配置中启用对应的 MCP 功能');
 try {
   const settings=JSON.parse(fs.readFileSync(path.join(root,'local/features-settings.json'),'utf8'));
   if(settings.phoneSerial && !process.env.PHONE_SERIAL) process.env.PHONE_SERIAL=settings.phoneSerial;

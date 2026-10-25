@@ -1,0 +1,2434 @@
+{
+  "original_total_files": 14716,
+  "first_party_files_compared": 399,
+  "original_fingerprints_checked": 399,
+  "original_changed_files": [],
+  "status_counts": {
+    "entry-restored": 38,
+    "generated-private": 4,
+    "private-history-rewritten": 26,
+    "source-restored": 325,
+    "private-replaced": 4,
+    "runtime-replaced": 1,
+    "license-excluded": 1
+  },
+  "original_script_entries": 38,
+  "unaccounted_public_files": [],
+  "unaccounted_npm_entrypoints": [],
+  "excluded_directory_groups": {
+    "打包运行环境、下载包和第三方源码": 1956,
+    "原 Git 历史与元数据": 221,
+    "个人/授权未逐项确认的媒体及测试资源": 24,
+    "依赖安装副本": 9025,
+    "私人消息、记忆、空间/媒体记录、日志与状态": 563,
+    "第三方网关、QQ/原生组件、登录与运行数据": 2516,
+    "私人备份与旧版本数据": 9,
+    "受限空间协议实现与随附许可文件": 3
+  },
+  "license_bound_features": [
+    {
+      "feature": "完整 QQ 空间协议后端",
+      "requirement": "自行取得授权的本地适配器或具备对应能力的网关；受限实现不能公开分发"
+    },
+    {
+      "feature": "QQ/网关原生集成",
+      "requirement": "自行安装具有使用权限且版本兼容的外部程序"
+    }
+  ],
+  "records": [
+    {
+      "source": "Configure.cmd",
+      "status": "entry-restored",
+      "target": "Configure.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "Gateway.cmd",
+      "status": "entry-restored",
+      "target": "Gateway.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "MCP空间配置.json",
+      "status": "generated-private",
+      "target": "MCP空间配置.example.json",
+      "reason": "模板公开；初始化时生成本机路径和自己的配置"
+    },
+    {
+      "source": "MCP配置.json",
+      "status": "generated-private",
+      "target": "MCP配置.example.json",
+      "reason": "模板公开；初始化时生成本机路径和自己的配置"
+    },
+    {
+      "source": "QQ掉线排查与修复.md",
+      "status": "private-history-rewritten",
+      "target": "QQ掉线排查与修复.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "QQ收藏表情使用说明.md",
+      "status": "private-history-rewritten",
+      "target": "QQ收藏表情使用说明.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "Restart.cmd",
+      "status": "entry-restored",
+      "target": "Restart.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "Start.cmd",
+      "status": "entry-restored",
+      "target": "Start.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "Stop.cmd",
+      "status": "entry-restored",
+      "target": "Stop.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "ai-companion-kit/.gitattributes",
+      "status": "source-restored",
+      "target": "ai-companion-kit/.gitattributes",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/.gitignore",
+      "status": "source-restored",
+      "target": "ai-companion-kit/.gitignore",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/LICENSE",
+      "status": "source-restored",
+      "target": "ai-companion-kit/LICENSE",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/README.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/README.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/发布文案-抖音-B站.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/发布文案-抖音-B站.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/她自己的生活-定时静默唤醒.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/她自己的生活-定时静默唤醒.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/完整教程-从零搭一只[private-name].md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/完整教程-从零搭一只小助手.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/01-主帖.txt",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/01-主帖.txt",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/02-教程上.txt",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/02-教程上.txt",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/03-教程中.txt",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/03-教程中.txt",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/04-教程下.txt",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/04-教程下.txt",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/05-发布指南.txt",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/05-发布指南.txt",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/06-傻瓜版.txt",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/06-傻瓜版.txt",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/07-进阶版.txt",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/07-进阶版.txt",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/08-进阶01-日记.txt",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/08-进阶01-日记.txt",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/09-视频教程脚本.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/09-视频教程脚本.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/10-从SnowLuma到桥接-逐步.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/10-从SnowLuma到桥接-逐步.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/11-完整视频教程-施工总表.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/11-完整视频教程-施工总表.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/小黑盒/12-小白照着做.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/小黑盒/12-小白照着做.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/快速开始-15分钟跑起来.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/快速开始-15分钟跑起来.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/docs/让AI帮你装-不用懂代码.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/docs/让AI帮你装-不用懂代码.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/package-lock.json",
+      "status": "source-restored",
+      "target": "ai-companion-kit/package-lock.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/package.json",
+      "status": "source-restored",
+      "target": "ai-companion-kit/package.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/README.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/README.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/config.example.json",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/config.example.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/config.json",
+      "status": "generated-private",
+      "target": "ai-companion-kit/packages/companion/config.example.json",
+      "reason": "真实凭据、账号、路径不复制；由模板在本地初始化"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/examples/demo.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/examples/demo.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/package.json",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/package.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/role.example.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/role.example.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/role.md",
+      "status": "private-replaced",
+      "target": "ai-companion-kit/packages/companion/role.example.md",
+      "reason": "私人角色或备份不公开，使用中立可替换模板"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/role.md.bak-features",
+      "status": "private-replaced",
+      "target": "ai-companion-kit/packages/companion/role.example.md",
+      "reason": "私人角色或备份不公开，使用中立可替换模板"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/brain.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/brain.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/diary-author.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/diary-author.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/diary-service.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/diary-service.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/diary.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/diary.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/group-addressing.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/group-addressing.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/group-mentions.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/group-mentions.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/humanize.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/humanize.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/identity-review.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/identity-review.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/index.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/index.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/lib.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/lib.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/meme-response.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/meme-response.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/memory.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/memory.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/message-context.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/message-context.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/owner-memory-worker.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/owner-memory-worker.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/owner-memory.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/owner-memory.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/qq-faces.json",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/qq-faces.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/role.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/role.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/transport-onebot.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/transport-onebot.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/turn-queue.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/turn-queue.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/companion/src/wake.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/companion/src/wake.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/own-life/package.json",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/own-life/package.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/own-life/src/own-life.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/own-life/src/own-life.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/own-life/test/own-life.test.mjs",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/own-life/test/own-life.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/phone-mcp/README.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/phone-mcp/README.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/phone-mcp/package.json",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/phone-mcp/package.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/phone-mcp/src/ncm.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/phone-mcp/src/ncm.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/phone-mcp/src/phone-mcp.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/phone-mcp/src/phone-mcp.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/qzone-mcp/README.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/qzone-mcp/README.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/qzone-mcp/package.json",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/qzone-mcp/package.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/qzone-mcp/src/qzone-mcp.js",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/qzone-mcp/src/qzone-mcp.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/qzone/README.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/qzone/README.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/qzone/open-zone.mjs",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/qzone/open-zone.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/qzone/package.json",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/qzone/package.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/qzone/role-patch.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/packages/qzone/role-patch.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/packages/qzone/开通.bat",
+      "status": "entry-restored",
+      "target": "ai-companion-kit/packages/qzone/开通.bat",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "ai-companion-kit/patches/01-bridge.patch",
+      "status": "source-restored",
+      "target": "ai-companion-kit/patches/01-bridge.patch",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/patches/02-mcp-snowluma-safe.patch",
+      "status": "source-restored",
+      "target": "ai-companion-kit/patches/02-mcp-snowluma-safe.patch",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/patches/03-own-life.patch",
+      "status": "source-restored",
+      "target": "ai-companion-kit/patches/03-own-life.patch",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/scripts/check-own-life.mjs",
+      "status": "source-restored",
+      "target": "ai-companion-kit/scripts/check-own-life.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/scripts/check.mjs",
+      "status": "source-restored",
+      "target": "ai-companion-kit/scripts/check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/tools/README.md",
+      "status": "source-restored",
+      "target": "ai-companion-kit/tools/README.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "ai-companion-kit/tools/install-node.ps1",
+      "status": "entry-restored",
+      "target": "ai-companion-kit/tools/install-node.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "ai-companion-kit/tools/写日记.bat",
+      "status": "entry-restored",
+      "target": "ai-companion-kit/tools/写日记.bat",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "ai-companion-kit/tools/启动.bat",
+      "status": "entry-restored",
+      "target": "ai-companion-kit/tools/启动.bat",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "ai-companion-kit/tools/安装.bat",
+      "status": "entry-restored",
+      "target": "ai-companion-kit/tools/安装.bat",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "ai-companion-kit/tools/看日记.bat",
+      "status": "entry-restored",
+      "target": "ai-companion-kit/tools/看日记.bat",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "gateway/start-native.cjs",
+      "status": "source-restored",
+      "target": "local/gateway-entry.cjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/QQ登录失效调查与组件升级.md",
+      "status": "private-history-rewritten",
+      "target": "local/QQ登录失效调查与组件升级.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/QQ空间自主互动说明.md",
+      "status": "private-history-rewritten",
+      "target": "local/QQ空间自主互动说明.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/WebUI免填Token说明.md",
+      "status": "private-history-rewritten",
+      "target": "local/WebUI免填Token说明.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/attachments-pipeline.test.mjs",
+      "status": "source-restored",
+      "target": "local/attachments-pipeline.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/autonomy-config.ps1",
+      "status": "entry-restored",
+      "target": "local/autonomy-config.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/autonomy-control.mjs",
+      "status": "source-restored",
+      "target": "local/autonomy-control.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/autonomy-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/autonomy-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/autonomy-utils.mjs",
+      "status": "source-restored",
+      "target": "local/autonomy-utils.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/autonomy.mjs",
+      "status": "source-restored",
+      "target": "local/autonomy.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/autonomy.test.mjs",
+      "status": "source-restored",
+      "target": "local/autonomy.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/build-stickers.ps1",
+      "status": "entry-restored",
+      "target": "local/build-stickers.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/chat-autonomy-check.mjs",
+      "status": "source-restored",
+      "target": "local/chat-autonomy-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/chat-autonomy-config.ps1",
+      "status": "entry-restored",
+      "target": "local/chat-autonomy-config.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/chat-autonomy.mjs",
+      "status": "source-restored",
+      "target": "local/chat-autonomy.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/chat-autonomy.test.mjs",
+      "status": "source-restored",
+      "target": "local/chat-autonomy.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/configure.ps1",
+      "status": "entry-restored",
+      "target": "local/configure.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/connection-recovery.test.mjs",
+      "status": "source-restored",
+      "target": "local/connection-recovery.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/create-media-fixtures.py",
+      "status": "source-restored",
+      "target": "local/create-media-fixtures.py",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/desktop-bootstrap.test.mjs",
+      "status": "source-restored",
+      "target": "local/desktop-bootstrap.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/desktop-login.html",
+      "status": "source-restored",
+      "target": "local/desktop-login.html",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/diary-tools.mjs",
+      "status": "source-restored",
+      "target": "local/diary-tools.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/diary.test.mjs",
+      "status": "source-restored",
+      "target": "local/diary.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/doctor.mjs",
+      "status": "source-restored",
+      "target": "local/doctor.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/document-requirements.txt",
+      "status": "private-history-rewritten",
+      "target": "local/document-requirements.txt",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/features-check.mjs",
+      "status": "source-restored",
+      "target": "local/features-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/features-settings.json",
+      "status": "generated-private",
+      "target": "local/features-settings.example.json",
+      "reason": "设备序列号与本机信息改为空模板"
+    },
+    {
+      "source": "local/features.mjs",
+      "status": "source-restored",
+      "target": "local/features.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/framework-login.test.mjs",
+      "status": "source-restored",
+      "target": "local/framework-login.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/gateway-check.mjs",
+      "status": "source-restored",
+      "target": "local/gateway-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/gateway-health.mjs",
+      "status": "source-restored",
+      "target": "local/gateway-health.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/gateway-runtime.cjs",
+      "status": "source-restored",
+      "target": "local/gateway-runtime.cjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/gateway-runtime.test.mjs",
+      "status": "source-restored",
+      "target": "local/gateway-runtime.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/gateway.ps1",
+      "status": "entry-restored",
+      "target": "local/gateway.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/gif-native-probe.mjs",
+      "status": "source-restored",
+      "target": "local/gif-native-probe.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/group-addressing-pipeline.test.mjs",
+      "status": "source-restored",
+      "target": "local/group-addressing-pipeline.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/group-addressing.test.mjs",
+      "status": "source-restored",
+      "target": "local/group-addressing.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/group-mentions-pipeline.test.mjs",
+      "status": "source-restored",
+      "target": "local/group-mentions-pipeline.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/group-mentions.test.mjs",
+      "status": "source-restored",
+      "target": "local/group-mentions.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/identity-session.test.mjs",
+      "status": "source-restored",
+      "target": "local/identity-session.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/incoming-attachments.mjs",
+      "status": "source-restored",
+      "target": "local/incoming-attachments.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/inspect-media-source.mjs",
+      "status": "source-restored",
+      "target": "local/inspect-media-source.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/integration-test.mjs",
+      "status": "source-restored",
+      "target": "local/integration-test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/intents.mjs",
+      "status": "source-restored",
+      "target": "local/intents.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/keep-awake.ps1",
+      "status": "entry-restored",
+      "target": "local/keep-awake.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/launch.ps1",
+      "status": "entry-restored",
+      "target": "local/launch.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/mcp-test.mjs",
+      "status": "source-restored",
+      "target": "local/mcp-test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/mcp.mjs",
+      "status": "source-restored",
+      "target": "local/mcp.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/media-runtime/package-lock.json",
+      "status": "source-restored",
+      "target": "local/media-runtime/package-lock.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/media-runtime/package.json",
+      "status": "source-restored",
+      "target": "local/media-runtime/package.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/memory-media-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/memory-media-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/memory-media-runtime-check.mjs",
+      "status": "source-restored",
+      "target": "local/memory-media-runtime-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/memory-media.test.mjs",
+      "status": "source-restored",
+      "target": "local/memory-media.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/message-parsing.test.mjs",
+      "status": "source-restored",
+      "target": "local/message-parsing.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/multi-speaker-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/multi-speaker-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/multi-speaker.test.mjs",
+      "status": "source-restored",
+      "target": "local/multi-speaker.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/multimedia-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/multimedia-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/multimedia-native.test.mjs",
+      "status": "source-restored",
+      "target": "local/multimedia-native.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/multimedia-pipeline.test.mjs",
+      "status": "source-restored",
+      "target": "local/multimedia-pipeline.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/multimedia-test.mjs",
+      "status": "source-restored",
+      "target": "local/multimedia-test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/multimedia.mjs",
+      "status": "source-restored",
+      "target": "local/multimedia.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/native-extra-check.mjs",
+      "status": "source-restored",
+      "target": "local/native-extra-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/native-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/native-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/native-vision-probe.mjs",
+      "status": "source-restored",
+      "target": "local/native-vision-probe.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/natural-sticker-check.mjs",
+      "status": "source-restored",
+      "target": "local/natural-sticker-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/owner-policy-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/owner-policy-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/owner-policy.test.mjs",
+      "status": "source-restored",
+      "target": "local/owner-policy.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/owner-reference-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/owner-reference-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/owner-reference.test.mjs",
+      "status": "source-restored",
+      "target": "local/owner-reference.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/persona-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/persona-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/persona-wake.test.mjs",
+      "status": "source-restored",
+      "target": "local/persona-wake.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/phone-check.mjs",
+      "status": "source-restored",
+      "target": "local/phone-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/phone-input-check.mjs",
+      "status": "source-restored",
+      "target": "local/phone-input-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/phone-setup.ps1",
+      "status": "entry-restored",
+      "target": "local/phone-setup.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/prepare-desktop-entry.cjs",
+      "status": "source-restored",
+      "target": "local/prepare-desktop-entry.cjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/prepare-desktop-entry.test.mjs",
+      "status": "source-restored",
+      "target": "local/prepare-desktop-entry.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/prepare-desktop-framework.cjs",
+      "status": "source-restored",
+      "target": "local/prepare-desktop-framework.cjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-auth-audit.cjs",
+      "status": "source-restored",
+      "target": "local/qq-auth-audit.cjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-auth-audit.test.mjs",
+      "status": "source-restored",
+      "target": "local/qq-auth-audit.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-favorites-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/qq-favorites-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-favorites.mjs",
+      "status": "source-restored",
+      "target": "local/qq-favorites.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-favorites.test.mjs",
+      "status": "source-restored",
+      "target": "local/qq-favorites.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-native-load.cjs",
+      "status": "source-restored",
+      "target": "local/qq-native-load.cjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-native-observe.mjs",
+      "status": "source-restored",
+      "target": "local/qq-native-observe.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-native-observe.test.mjs",
+      "status": "source-restored",
+      "target": "local/qq-native-observe.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-native-services.cjs",
+      "status": "source-restored",
+      "target": "local/qq-native-services.cjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-native-services.test.mjs",
+      "status": "source-restored",
+      "target": "local/qq-native-services.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-runtime-migrate.ps1",
+      "status": "entry-restored",
+      "target": "local/qq-runtime-migrate.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/qq-session-bridge.cjs",
+      "status": "source-restored",
+      "target": "local/qq-session-bridge.cjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qq-session-bridge.test.mjs",
+      "status": "source-restored",
+      "target": "local/qq-session-bridge.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qzone-adapter.mjs",
+      "status": "source-restored",
+      "target": "local/qzone-adapter.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qzone-autonomy-check.mjs",
+      "status": "source-restored",
+      "target": "local/qzone-autonomy-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qzone-autonomy.mjs",
+      "status": "source-restored",
+      "target": "local/qzone-autonomy.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qzone-autonomy.test.mjs",
+      "status": "source-restored",
+      "target": "local/qzone-autonomy.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qzone-capability-check.mjs",
+      "status": "source-restored",
+      "target": "local/qzone-capability-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qzone-http.mjs",
+      "status": "source-restored",
+      "target": "local/qzone-http.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qzone-mcp.mjs",
+      "status": "source-restored",
+      "target": "local/qzone-mcp.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/qzone-post-check.mjs",
+      "status": "source-restored",
+      "target": "local/qzone-post-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/read-document.py",
+      "status": "source-restored",
+      "target": "local/read-document.py",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/recent-media.mjs",
+      "status": "source-restored",
+      "target": "local/recent-media.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/recover-owner-memory.mjs",
+      "status": "source-restored",
+      "target": "local/recover-owner-memory.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/repair2-acceptance.mjs",
+      "status": "source-restored",
+      "target": "local/repair2-acceptance.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/repair2-vision-check.mjs",
+      "status": "source-restored",
+      "target": "local/repair2-vision-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/repair2.test.mjs",
+      "status": "source-restored",
+      "target": "local/repair2.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/request-audit.mjs",
+      "status": "source-restored",
+      "target": "local/request-audit.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/restart.ps1",
+      "status": "entry-restored",
+      "target": "local/restart.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/run.mjs",
+      "status": "source-restored",
+      "target": "local/run.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/screen-off-check.mjs",
+      "status": "source-restored",
+      "target": "local/screen-off-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/screen-off-native.cs",
+      "status": "source-restored",
+      "target": "local/screen-off-native.cs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/screen-off.ps1",
+      "status": "entry-restored",
+      "target": "local/screen-off.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/send-check.mjs",
+      "status": "source-restored",
+      "target": "local/send-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/service.mjs",
+      "status": "source-restored",
+      "target": "local/service.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/sticker-collector.mjs",
+      "status": "source-restored",
+      "target": "local/sticker-collector.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/sticker-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/sticker-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/sticker-preference-live-check.mjs",
+      "status": "source-restored",
+      "target": "local/sticker-preference-live-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/sticker-preference.test.mjs",
+      "status": "source-restored",
+      "target": "local/sticker-preference.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/stickers.mjs",
+      "status": "source-restored",
+      "target": "local/stickers.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/stop.ps1",
+      "status": "entry-restored",
+      "target": "local/stop.ps1",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "local/vendor-build.mjs",
+      "status": "source-restored",
+      "target": "local/vendor-build.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/verification-status.json",
+      "status": "runtime-replaced",
+      "target": "docs/static-checks.json",
+      "reason": "历史运行验收不移植，使用本次真实静态结果"
+    },
+    {
+      "source": "local/voice-regression-check.mjs",
+      "status": "source-restored",
+      "target": "local/voice-regression-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/voice-send-check.mjs",
+      "status": "source-restored",
+      "target": "local/voice-send-check.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/webui-local-client.mjs",
+      "status": "source-restored",
+      "target": "local/webui-local-client.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/webui-local-login.mjs",
+      "status": "source-restored",
+      "target": "local/webui-local-login.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/webui-local-login.test.mjs",
+      "status": "source-restored",
+      "target": "local/webui-local-login.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "local/主人优先与统一记忆.md",
+      "status": "private-history-rewritten",
+      "target": "local/主人优先与统一记忆.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/主人唤醒与人设修复.md",
+      "status": "private-history-rewritten",
+      "target": "local/主人唤醒与人设修复.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/主人记忆与附件功能说明.md",
+      "status": "private-history-rewritten",
+      "target": "local/主人记忆与附件功能说明.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/主动私聊使用说明.md",
+      "status": "private-history-rewritten",
+      "target": "local/主动私聊使用说明.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/关屏继续运行验收.md",
+      "status": "private-history-rewritten",
+      "target": "local/关屏继续运行验收.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/多人群聊身份归属修复.md",
+      "status": "private-history-rewritten",
+      "target": "local/多人群聊身份归属修复.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/[private-name]改名验收.md",
+      "status": "private-history-rewritten",
+      "target": "local/角色改名验收.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/日记启用与验收.md",
+      "status": "private-history-rewritten",
+      "target": "local/日记启用与验收.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/消息解析修复说明.md",
+      "status": "private-history-rewritten",
+      "target": "local/消息解析修复说明.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/空闲掉线修复说明.md",
+      "status": "private-history-rewritten",
+      "target": "local/空闲掉线修复说明.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/第三人称主人称呼修复.md",
+      "status": "private-history-rewritten",
+      "target": "local/第三人称主人称呼修复.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/群聊目标识别修复与验收.md",
+      "status": "private-history-rewritten",
+      "target": "local/群聊目标识别修复与验收.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/表情包自然回复.md",
+      "status": "private-history-rewritten",
+      "target": "local/表情包自然回复.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "local/身份与会话检查.md",
+      "status": "private-history-rewritten",
+      "target": "local/身份与会话检查.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "qq-bridge/.gitignore",
+      "status": "source-restored",
+      "target": "qq-bridge/.gitignore",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/.npmrc",
+      "status": "source-restored",
+      "target": "qq-bridge/.npmrc",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/LICENSE",
+      "status": "source-restored",
+      "target": "qq-bridge/LICENSE",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/README.en.md",
+      "status": "source-restored",
+      "target": "qq-bridge/README.en.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/README.md",
+      "status": "source-restored",
+      "target": "qq-bridge/README.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/RULES.md",
+      "status": "source-restored",
+      "target": "qq-bridge/RULES.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/_snowluma-catalog.json",
+      "status": "license-excluded",
+      "target": "qq-bridge/src/onebot-client.js",
+      "reason": "受限第三方目录快照不分发；自有 OneBot 传输和安全 MCP 替代实际用到的接口"
+    },
+    {
+      "source": "qq-bridge/config.example.json",
+      "status": "source-restored",
+      "target": "qq-bridge/config.example.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/docs/FOLDER_MAP.md",
+      "status": "source-restored",
+      "target": "qq-bridge/docs/FOLDER_MAP.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/docs/README.md",
+      "status": "source-restored",
+      "target": "qq-bridge/docs/README.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/docs/guides/CONSOLE-UI-TESTING.md",
+      "status": "source-restored",
+      "target": "qq-bridge/docs/guides/CONSOLE-UI-TESTING.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/docs/guides/DSH_020_ADAPTATION.md",
+      "status": "source-restored",
+      "target": "qq-bridge/docs/guides/DSH_020_ADAPTATION.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/docs/guides/DSH_021_ADAPTATION.md",
+      "status": "source-restored",
+      "target": "qq-bridge/docs/guides/DSH_021_ADAPTATION.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/docs/guides/DSH_SETUP.md",
+      "status": "source-restored",
+      "target": "qq-bridge/docs/guides/DSH_SETUP.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/docs/guides/PRIVACY.md",
+      "status": "source-restored",
+      "target": "qq-bridge/docs/guides/PRIVACY.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/docs/guides/SECURITY_BASELINE.md",
+      "status": "source-restored",
+      "target": "qq-bridge/docs/guides/SECURITY_BASELINE.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/docs/guides/TOKEN_USAGE_CONSOLE.md",
+      "status": "source-restored",
+      "target": "qq-bridge/docs/guides/TOKEN_USAGE_CONSOLE.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/dsh/agent-presets/qq-chat-v2/agent.cordis.yml",
+      "status": "source-restored",
+      "target": "qq-bridge/dsh/agent-presets/qq-chat-v2/agent.cordis.yml",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/dsh/agent-presets/qq-chat-v2/preset.yml",
+      "status": "source-restored",
+      "target": "qq-bridge/dsh/agent-presets/qq-chat-v2/preset.yml",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/dsh/agent-presets/qq-chat-v2/qq-tool-restrict.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/dsh/agent-presets/qq-chat-v2/qq-tool-restrict.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/dsh/agent-presets/qq-chat/agent.cordis.yml",
+      "status": "source-restored",
+      "target": "qq-bridge/dsh/agent-presets/qq-chat/agent.cordis.yml",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/dsh/agent-presets/qq-chat/preset.yml",
+      "status": "source-restored",
+      "target": "qq-bridge/dsh/agent-presets/qq-chat/preset.yml",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/dsh/agent-presets/qq-chat/qq-tool-restrict.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/dsh/agent-presets/qq-chat/qq-tool-restrict.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/package-lock.json",
+      "status": "source-restored",
+      "target": "qq-bridge/package-lock.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/package.json",
+      "status": "source-restored",
+      "target": "qq-bridge/package.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/plugins/qq-agent-presets/package.json",
+      "status": "source-restored",
+      "target": "qq-bridge/plugins/qq-agent-presets/package.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/plugins/qq-agent-presets/presets/qq-chat-v2.patch.yml",
+      "status": "source-restored",
+      "target": "qq-bridge/plugins/qq-agent-presets/presets/qq-chat-v2.patch.yml",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/plugins/qq-agent-presets/presets/qq-chat.patch.yml",
+      "status": "source-restored",
+      "target": "qq-bridge/plugins/qq-agent-presets/presets/qq-chat.patch.yml",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/plugins/qq-agent-presets/qq-tool-restrict.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/plugins/qq-agent-presets/qq-tool-restrict.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/plugins/qq-mode-console/cordis.patch.yml",
+      "status": "source-restored",
+      "target": "qq-bridge/plugins/qq-mode-console/cordis.patch.yml",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/plugins/qq-mode-console/lib/index.js",
+      "status": "source-restored",
+      "target": "qq-bridge/plugins/qq-mode-console/lib/index.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/plugins/qq-mode-console/package.json",
+      "status": "source-restored",
+      "target": "qq-bridge/plugins/qq-mode-console/package.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/public/console.html",
+      "status": "source-restored",
+      "target": "qq-bridge/public/console.html",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/restart.bat",
+      "status": "entry-restored",
+      "target": "qq-bridge/restart.bat",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "qq-bridge/roles/README.md",
+      "status": "source-restored",
+      "target": "qq-bridge/roles/README.md",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/roles/傲娇助手.md",
+      "status": "private-replaced",
+      "target": "qq-bridge/roles/default.example.md",
+      "reason": "私人角色或备份不公开，使用中立可替换模板"
+    },
+    {
+      "source": "qq-bridge/roles/[private-name].md",
+      "status": "private-replaced",
+      "target": "qq-bridge/roles/default.example.md",
+      "reason": "私人角色或备份不公开，使用中立可替换模板"
+    },
+    {
+      "source": "qq-bridge/scripts/audit-bridge-harness.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/audit-bridge-harness.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/build-agent-preset-patches.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/build-agent-preset-patches.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/check-onebot-status.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/check-onebot-status.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/console-ui-contracts.json",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/console-ui-contracts.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/console-ui-fixture.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/console-ui-fixture.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/console-ui-legacy-ids.json",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/console-ui-legacy-ids.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/diagnose-acl.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/diagnose-acl.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/dsh-modules.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/dsh-modules.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/dsh-tool-names.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/dsh-tool-names.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/fixtures/console.before.html",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/fixtures-public/console.before.html",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/harden-state-acl.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/harden-state-acl.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/patch-snowluma-sdk.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/patch-snowluma-sdk.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/privacy-rules.example.json",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/privacy-rules.example.json",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/privacy-scan.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/privacy-scan.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/probe-020-protocol.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/probe-020-protocol.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/probe-020-settings.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/probe-020-settings.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/probe-auth.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/probe-auth.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/probe-events.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/probe-events.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/probe-models.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/probe-models.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/probe-rpc-compat.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/probe-rpc-compat.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/probe-snowluma-heartbeat.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/probe-snowluma-heartbeat.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/probe-tools.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/probe-tools.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/probe-workspace.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/probe-workspace.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/scan-dsh-tool-names.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/scan-dsh-tool-names.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/send-test-group.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/send-test-group.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/send-voice.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/send-voice.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/setup-dsh.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/setup-dsh.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-agent-preset-patches.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-agent-preset-patches.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-audit-bridge.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-audit-bridge.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-audit-protocol-helpers.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-audit-protocol-helpers.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-audit-protocol.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-audit-protocol.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-audit-regressions.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-audit-regressions.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-audit-security-mcp.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-audit-security-mcp.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-audit-security.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-audit-security.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-audit-setup-guards.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-audit-setup-guards.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-audit-setup.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-audit-setup.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-audit.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-audit.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-console-encoding.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-console-encoding.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-console-static.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-console-static.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-console-ui.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-console-ui.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-console.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-console.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-dsh-auth.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-dsh-auth.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-dsh-inbox-projection.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-dsh-inbox-projection.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-dsh-session-retire.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-dsh-session-retire.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-dsh-v2-wait.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-dsh-v2-wait.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-encoding.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-encoding.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-forward.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-forward.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-hardening.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-hardening.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-issue-regressions.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-issue-regressions.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-mcp-exec.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-mcp-exec.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-mcp-host.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-mcp-host.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-mcp-safe.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-mcp-safe.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-mcp-servers-stdio.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-mcp-servers-stdio.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-mcp-web-search.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-mcp-web-search.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-md-to-plain.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-md-to-plain.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-media-normalize.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-media-normalize.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-media-search.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-media-search.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-mux-reconnect.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-mux-reconnect.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-onebot-connection.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-onebot-connection.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-preset-local-tools.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-preset-local-tools.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-preset-prompt.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-preset-prompt.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-qq-mode-plugin.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-qq-mode-plugin.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-qq-model-view.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-qq-model-view.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-qq-preset-contract.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-qq-preset-contract.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-reply-wait.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-reply-wait.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-role-card.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-role-card.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-setup-dsh-idempotent.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-setup-dsh-idempotent.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-slang-learn.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-slang-learn.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-snowluma-conn.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-snowluma-conn.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-snowluma-upstream-health.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-snowluma-upstream-health.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-sticker-http-fallback.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-sticker-http-fallback.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-stickers.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-stickers.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-time-awareness.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-time-awareness.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-token-economy.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-token-economy.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-token-usage.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-token-usage.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-tool-restrict-guard.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-tool-restrict-guard.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-tool-surface.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-tool-surface.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-v2-initial-prompt.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-v2-initial-prompt.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-v2-wait.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-v2-wait.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-vision-media.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-vision-media.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-voice-edge.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-voice-edge.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-voice-gui.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-voice-gui.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-voice-preview.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-voice-preview.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-voice-system.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-voice-system.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-voice-volume.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-voice-volume.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-voice.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-voice.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/test-wait-backlog.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/test-wait-backlog.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/verify-agent-presets-017.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/verify-agent-presets-017.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/verify-dsh-021-adaptation.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/verify-dsh-021-adaptation.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/verify-persona-config.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/verify-persona-config.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/scripts/voice-tool-locator.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/scripts/voice-tool-locator.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/bridge.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/bridge.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/core/session-router.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/src/core/session-router.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/core/session-router.test.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/src/core/session-router.test.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/dsh-client.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/dsh-client.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/forward.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/forward.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/mcp-host-server.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/mcp-host-server.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/mcp-snowluma-safe.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/mcp-snowluma-safe.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/mcp-web-search-safe.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/mcp-web-search-safe.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/md-to-plain.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/md-to-plain.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/media-normalize.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/media-normalize.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/model-prices.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/model-prices.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/preset-prompt.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/preset-prompt.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/qq-model-view.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/qq-model-view.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/role-card.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/role-card.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/safe-fetch.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/safe-fetch.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/self-test.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/self-test.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/send-voice-lib.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/send-voice-lib.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/sensitive.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/sensitive.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/slang-learner.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/slang-learner.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/snowluma-conn.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/snowluma-conn.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/state-acl.mjs",
+      "status": "source-restored",
+      "target": "qq-bridge/src/state-acl.mjs",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/sticker-lib.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/sticker-lib.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/token-ledger.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/token-ledger.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/v2-wait.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/v2-wait.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/voice-core.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/voice-core.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/src/web-search.js",
+      "status": "source-restored",
+      "target": "qq-bridge/src/web-search.js",
+      "reason": "保留或脱敏恢复；已有通用实现继续使用"
+    },
+    {
+      "source": "qq-bridge/start.bat",
+      "status": "entry-restored",
+      "target": "qq-bridge/start.bat",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "一键启动.cmd",
+      "status": "entry-restored",
+      "target": "一键启动.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "主动私聊设置.cmd",
+      "status": "entry-restored",
+      "target": "主动私聊设置.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "仅关屏保持[private-name]运行.cmd",
+      "status": "entry-restored",
+      "target": "仅关屏保持机器人运行.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "停止全部.cmd",
+      "status": "entry-restored",
+      "target": "停止全部.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "写日记.cmd",
+      "status": "entry-restored",
+      "target": "写日记.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "多媒体与自主行为验收报告.md",
+      "status": "private-history-rewritten",
+      "target": "多媒体与自主行为验收报告.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "恢复自主行为.cmd",
+      "status": "entry-restored",
+      "target": "恢复自主行为.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "暂停自主行为.cmd",
+      "status": "entry-restored",
+      "target": "暂停自主行为.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "本机使用说明.md",
+      "status": "private-history-rewritten",
+      "target": "本机使用说明.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "本轮修复与验收.md",
+      "status": "private-history-rewritten",
+      "target": "本轮修复与验收.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "检查环境.cmd",
+      "status": "entry-restored",
+      "target": "检查环境.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "看日记.cmd",
+      "status": "entry-restored",
+      "target": "看日记.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "群聊提及修复与验收.md",
+      "status": "private-history-rewritten",
+      "target": "群聊提及修复与验收.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "自主与多媒体使用说明.md",
+      "status": "private-history-rewritten",
+      "target": "自主与多媒体使用说明.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    },
+    {
+      "source": "自主行为设置.cmd",
+      "status": "entry-restored",
+      "target": "自主行为设置.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "连接手机.cmd",
+      "status": "entry-restored",
+      "target": "连接手机.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "配置百炼和QQ.cmd",
+      "status": "entry-restored",
+      "target": "配置百炼和QQ.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "重启机器人.cmd",
+      "status": "entry-restored",
+      "target": "重启机器人.cmd",
+      "reason": "保留原 GUI 或通用重实现入口，使用本目录路径和自己的配置"
+    },
+    {
+      "source": "验收记录.md",
+      "status": "private-history-rewritten",
+      "target": "验收记录.md",
+      "reason": "使用通用说明替代原本机账号/聊天/验收片段；功能源码保留"
+    }
+  ]
+}

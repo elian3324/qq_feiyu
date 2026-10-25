@@ -8,7 +8,7 @@
 | --- | --- |
 | QQ 群聊与私聊 | NapCat 等 OneBot v11 网关；正向 WebSocket 收事件、HTTP 调用动作；白名单、提及与引用解析、多人身份区分、断线重连 |
 | AI 接入 | OpenAI 兼容 Chat Completions 接口，可配置 DeepSeek 或阿里云百炼；模型与区域以部署者账户实际支持为准 |
-| 角色与主人身份 | `role.md` 可替换；`ownerIds` 按平台 ID 识别管理员，不信任昵称或消息中的自称 |
+| 角色与管理员身份 | `role.md` 可替换；`ownerIds` 按平台 ID 识别管理员，不信任昵称或消息中的自称 |
 | 记忆与日记 | 会话上下文、管理员长期记忆、按会话隔离、记忆后台整理、手动与定时日记 |
 | 图片与表情 | 图像输入、GIF 采样、本地表情目录、QQ 收藏表情读取/发送/收藏；相关网关扩展需要实际支持 |
 | 语音、视频、文件 | 百炼 TTS/ASR、SILK 解码、视频抽帧、常见文本及 PDF/Office 阅读；需要额外工具和对应模型 |
@@ -16,7 +16,17 @@
 | QQ 空间 | 发布、动态读取、点赞、评论、回复以及自主互动的调用与决策逻辑保留；需要兼容的空间扩展网关，详见 [空间接口](docs/QZONE.md) |
 | Android 手机工具 | 可选 MCP + ADB；截图、操作与录屏等功能默认关闭 |
 
-**空间扩展不是标准 OneBot v11 能力。** 本仓库没有捆绑原先许可证限制公开分发的协议改写文件；改为使用明确配置的网关接口。仅配置普通 NapCat 不保证拥有完整空间互动能力。历史 DSH/SnowLuma 启动器、桌面登录补丁与第三方程序包不作为本版本的部署路径；`qq-bridge/` 仅保留现行主链路所需的 MIT 媒体辅助模块。
+**空间扩展不是标准 OneBot v11 能力。** 自有空间逻辑完整保留，支持空间网关或用户另行取得授权的本地协议适配器。仅配置普通 NapCat 不保证拥有完整空间互动能力。受限第三方实现不能随仓库分发，详见 [高级集成](docs/ADVANCED_INTEGRATION.md)。
+
+原 DSH 桥接、控制台、插件、预设、原生适配和诊断/测试源码已经恢复。DSH 是另一条运行路径，见 [桥接部署](docs/DSH_BRIDGE.md)。所有原文件的恢复或替代去向见 [逐项对照](docs/FILE_PARITY.md)。
+
+## Windows 快捷部署
+
+快捷脚本随仓库提供，下载后就存在；不会等启动后再生成。
+
+依次使用 `安装依赖.cmd` → `Configure.cmd` / `配置百炼和QQ.cmd` → 编辑自己的 `.env` 网关凭据 → 启动自己的 NapCat → `Start.cmd` / `一键启动.cmd`。
+
+`初始化配置.cmd` 只在本地创建缺少的 `.env`、账号配置、人设、通用表情库和本机 MCP 配置，保留已有配置。停止、重启、日记、自主行为、手机、日志、表情生成、关屏防睡眠和守护模式入口均已提供。完整清单见 [脚本说明](docs/SCRIPTS.md)。
 
 ## 环境
 
@@ -38,6 +48,7 @@ Windows 的 `Start.cmd` 会把工作目录设为仓库根目录；其他系统�
    ```powershell
    npm --prefix ai-companion-kit ci --ignore-scripts
    npm --prefix local/media-runtime ci --ignore-scripts
+   npm --prefix qq-bridge ci --ignore-scripts
    ```
 
 2. 复制模板（PowerShell）：
@@ -113,7 +124,7 @@ AI_API_KEY=
 npm start
 ```
 
-Windows 也可双击 `Start.cmd`。在运行窗口按 `Ctrl+C` 停止本机器人进程；网关由部署者独立管理。内置 OneBot 客户端保留断线重连逻辑，本版本不自动操作第三方网关进程。
+Windows 也可双击 `Start.cmd`。在运行窗口按 `Ctrl+C` 停止本机器人进程，或使用 `Stop.cmd` / `Restart.cmd`。启停脚本核验本目录的进程身份，不按通用进程名停止其他机器人。网关使用自己配置的独立启动器；内置 OneBot 客户端保留断线重连，也可使用 `守护模式启动.cmd`。
 
 - 白名单内私聊可直接交流；群聊默认需要 @ 机器人，管理员群聊免 @ 由 `wake.ownerAlwaysWake` 控制，仍受目标识别与白名单约束。
 - 启用多模态模型和 FFmpeg 后，可以发送图片、GIF。没有附带私人表情素材；本地表情配置见 [配置手册](docs/CONFIGURATION.md)。
@@ -131,9 +142,9 @@ Windows 也可双击 `Start.cmd`。在运行窗口按 `Ctrl+C` 停止本机器�
 python -B scripts/static_audit.py
 ```
 
-检查器仅解析文件、检查 Node 语法与 Git 忽略规则，不加载业务模块、不安装依赖、不联网。已配置并运行的私人工作副本会因出现 `.env`、`data/` 等文件而检查失败；发布请使用干净目录。
+检查器仅解析文件、检查 Node/PowerShell/内联浏览器脚本语法与 Git 忽略规则，不加载业务模块、不安装依赖、不联网。已经初始化 Git 的源码工作区可加 `--allow-local-git`，此选项仅跳过当前工作区的 Git 元数据，不代表已经检查历史。已配置运行的私人副本会因出现 `.env`、`data/` 等文件而失败；发布请使用干净导出目录。
 
-发布前阅读 [清理与静态审计报告](docs/RELEASE_AUDIT.md)、[安全说明](SECURITY.md)、[第三方许可说明](docs/THIRD_PARTY_NOTICES.md)。没有携带任何原项目 `.git` 或历史提交；请在确认发布文件后自行创建新的 Git 历史。本次整理没有初始化发布历史、上传或执行 Git Push。
+发布前阅读 [文件差异与恢复清单](docs/FILE_PARITY.md)、[静态审计报告](docs/RELEASE_AUDIT.md)、[安全说明](SECURITY.md) 和 [第三方许可说明](docs/THIRD_PARTY_NOTICES.md)。没有复制原项目 `.git` 或历史提交；用户自行建立的开源仓库 Git 元数据保留。本次整理没有提交、上传或执行 Git Push。
 
 ## 许可证
 

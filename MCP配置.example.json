@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "qq-phone": {
+      "command": "__NODE_EXECUTABLE__",
+      "args": [
+        "--env-file=__PROJECT_ROOT__/.env",
+        "__PROJECT_ROOT__/local/mcp.mjs",
+        "phone"
+      ],
+      "env": {
+        "COMPANION_CONFIG": "__PROJECT_ROOT__/ai-companion-kit/packages/companion/config.json"
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@
   "description": "Configurable OneBot QQ AI bot with memory, media, diary and optional autonomy",
   "engines": { "node": ">=22.13.0" },
   "scripts": {
-    "start": "node --env-file=.env local/run.mjs",
+    "start": "node --env-file=.env local/start.mjs",
     "audit:static": "python -B scripts/static_audit.py"
   }
 }

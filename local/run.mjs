@@ -1,5 +1,6 @@
 // Explicit runtime entry point. Static release checks never execute this file.
 import fs from 'node:fs';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { main, loadConfig } from '../ai-companion-kit/packages/companion/src/index.js';
 const root = new URL('../', import.meta.url);
@@ -23,8 +24,13 @@ try {
     catch (error) { if (error.code !== 'ESRCH') throw error; }
   }
   fs.writeFileSync(pidFile, String(process.pid));
+  const markerFile=fileURLToPath(new URL('logs/instance.json',root));
+  const rootPath=path.resolve(fileURLToPath(root));
+  const startedAtMs=Math.round(Date.now()-process.uptime()*1000);
+  fs.writeFileSync(markerFile,JSON.stringify({pid:process.pid,root:rootPath,entry:fileURLToPath(import.meta.url),startedAtMs}));
   process.on('exit', () => {
     try { if (fs.readFileSync(pidFile, 'utf8') === String(process.pid)) fs.unlinkSync(pidFile); } catch {}
+    try { if (JSON.parse(fs.readFileSync(markerFile,'utf8')).pid===process.pid) fs.unlinkSync(markerFile); } catch {}
   });
   await main();
 } catch {

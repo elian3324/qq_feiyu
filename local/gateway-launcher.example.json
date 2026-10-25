@@ -1,0 +1,9 @@
+{
+  "provider": "napcat",
+  "allowLaunch": false,
+  "autoRecover": false,
+  "command": "",
+  "arguments": [],
+  "workingDirectory": "",
+  "allowStop": false
+}

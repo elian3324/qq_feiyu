@@ -1,4 +1,4 @@
 @echo off
 cd /d "%~dp0"
-node --env-file=.env local/run.mjs
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "scripts\windows-controls.ps1" -Action start
 pause

@@ -1,0 +1,7 @@
+# Inherit the root privacy rules.
+node_modules/
+config.json
+state/
+logs/
+audio/
+*.log

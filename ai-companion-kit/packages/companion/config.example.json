@@ -120,7 +120,8 @@
     "enabled": false,
     "httpUrl": "",
     "accessToken": "",
-    "actions": {}
+    "actions": {},
+    "protocolModule": ""
   },
   "autonomy": {
     "timezone": "Asia/Shanghai",

@@ -1,0 +1,414 @@
+{
+  "original_npm_entrypoints": 68,
+  "unaccounted_npm_entrypoints": [],
+  "records": [
+    {
+      "package": "ai-companion-kit/package.json",
+      "script": "demo",
+      "replacement": "node --env-file=../.env packages/companion/examples/demo.js",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/package.json",
+      "script": "check",
+      "replacement": "node --env-file=../.env scripts/check.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/package.json",
+      "script": "phone",
+      "replacement": "node --env-file=../.env packages/phone-mcp/src/phone-mcp.js",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/package.json",
+      "script": "phone:test",
+      "replacement": "node --env-file=../.env packages/phone-mcp/src/phone-mcp.js --selftest",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/package.json",
+      "script": "qzone",
+      "replacement": "node --env-file=../.env packages/qzone/open-zone.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/package.json",
+      "script": "qzone:test",
+      "replacement": "node --env-file=../.env packages/qzone-mcp/src/qzone-mcp.js --selftest",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/companion/package.json",
+      "script": "start",
+      "replacement": "node src/index.js --config ./config.json",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/companion/package.json",
+      "script": "check",
+      "replacement": "node src/index.js --check --config ./config.json",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/companion/package.json",
+      "script": "dry",
+      "replacement": "node src/index.js --dry-run --config ./config.json",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/companion/package.json",
+      "script": "diary",
+      "replacement": "node src/diary.js",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/companion/package.json",
+      "script": "diary:auto",
+      "replacement": "node src/diary.js auto",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/own-life/package.json",
+      "script": "test",
+      "replacement": "node test/own-life.test.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/phone-mcp/package.json",
+      "script": "start",
+      "replacement": "node src/phone-mcp.js",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/phone-mcp/package.json",
+      "script": "selftest",
+      "replacement": "node src/phone-mcp.js --selftest",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/qzone/package.json",
+      "script": "dry",
+      "replacement": "node open-zone.mjs --dry",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/qzone/package.json",
+      "script": "open",
+      "replacement": "node open-zone.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/qzone-mcp/package.json",
+      "script": "start",
+      "replacement": "node src/qzone-mcp.js",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "ai-companion-kit/packages/qzone-mcp/package.json",
+      "script": "selftest",
+      "replacement": "node src/qzone-mcp.js --selftest",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "start",
+      "replacement": "node --env-file=../.env src/bridge.js",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:audit",
+      "replacement": "node scripts/test-audit.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:token",
+      "replacement": "node scripts/test-token-economy.mjs && node scripts/test-reply-wait.mjs && node scripts/test-qq-model-view.mjs && node scripts/test-qq-preset-contract.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:tokens",
+      "replacement": "node scripts/test-token-usage.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:hardening",
+      "replacement": "node scripts/test-hardening.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:reply-wait",
+      "replacement": "node scripts/test-reply-wait.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "self-test",
+      "replacement": "node src/self-test.js",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-md",
+      "replacement": "node scripts/test-md-to-plain.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-wait",
+      "replacement": "node scripts/test-v2-wait.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:initial-prompt",
+      "replacement": "node scripts/test-v2-initial-prompt.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:regressions",
+      "replacement": "node scripts/test-audit-regressions.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:media-search",
+      "replacement": "node scripts/test-media-search.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:media-normalize",
+      "replacement": "node scripts/test-media-normalize.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:issues",
+      "replacement": "node scripts/test-issue-regressions.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-wait:e2e",
+      "replacement": "node scripts/test-dsh-v2-wait.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-vision",
+      "replacement": "node scripts/test-vision-media.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-forward",
+      "replacement": "node scripts/test-forward.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-slang",
+      "replacement": "node scripts/test-slang-learn.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-stickers",
+      "replacement": "node scripts/test-stickers.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-voice",
+      "replacement": "node scripts/test-voice.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-voice:gui",
+      "replacement": "node scripts/test-voice-gui.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-voice:system",
+      "replacement": "node scripts/test-voice-system.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-encoding",
+      "replacement": "node scripts/test-encoding.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "send-voice",
+      "replacement": "node scripts/send-voice.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "voice-gui",
+      "replacement": "node scripts/open-voice-tool.mjs gui",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "voice-cli",
+      "replacement": "node scripts/open-voice-tool.mjs cli",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test-console",
+      "replacement": "node scripts/test-console.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:console-ui",
+      "replacement": "node scripts/test-console-ui.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:preset-prompt",
+      "replacement": "node scripts/test-preset-prompt.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:role-card",
+      "replacement": "node scripts/test-role-card.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "preview:console",
+      "replacement": "node scripts/console-ui-fixture.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "verify:adaptation",
+      "replacement": "node scripts/verify-dsh-021-adaptation.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:dsh-auth",
+      "replacement": "node scripts/test-dsh-auth.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:dsh-inbox",
+      "replacement": "node scripts/test-dsh-inbox-projection.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:session-retire:e2e",
+      "replacement": "node scripts/test-dsh-session-retire.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "verify:persona",
+      "replacement": "node scripts/verify-persona-config.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:mcp-servers",
+      "replacement": "node scripts/test-mcp-servers-stdio.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:plugin",
+      "replacement": "node scripts/test-qq-mode-plugin.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:setup-idempotent",
+      "replacement": "node scripts/test-setup-dsh-idempotent.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "test:mux-reconnect",
+      "replacement": "node scripts/test-mux-reconnect.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "probe:events",
+      "replacement": "node scripts/probe-events.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "probe:tools",
+      "replacement": "node scripts/probe-tools.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "probe:protocol",
+      "replacement": "node scripts/probe-020-protocol.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "probe:settings",
+      "replacement": "node scripts/probe-020-settings.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "probe:heartbeat",
+      "replacement": "node scripts/probe-snowluma-heartbeat.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "scan:tool-names",
+      "replacement": "node scripts/scan-dsh-tool-names.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "postinstall",
+      "replacement": null,
+      "reason": "受限 SDK 已由独立客户端替换，不再执行修改第三方安装副本的钩子"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "privacy-scan",
+      "replacement": "node scripts/privacy-scan.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "diagnose:acl",
+      "replacement": "node scripts/diagnose-acl.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    },
+    {
+      "package": "qq-bridge/package.json",
+      "script": "harden-acl",
+      "replacement": "node scripts/harden-state-acl.mjs",
+      "reason": "保留入口；必要时改用相对路径、环境变量或通用实现"
+    }
+  ]
+}

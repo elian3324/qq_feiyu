@@ -1,0 +1,7 @@
+# Inherit the root privacy rules. Lockfiles are intentionally distributed.
+node_modules/
+config.json
+role.md
+data/
+logs/
+!package-lock.json

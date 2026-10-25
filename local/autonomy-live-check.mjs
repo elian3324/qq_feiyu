@@ -1,0 +1,21 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {loadConfig} from '../ai-companion-kit/packages/companion/src/index.js';
+import {Role} from '../ai-companion-kit/packages/companion/src/role.js';
+import {Memory} from '../ai-companion-kit/packages/companion/src/memory.js';
+import {Autonomy,localTime} from './autonomy.mjs';
+const root=fileURLToPath(new URL('../',import.meta.url)),cfg=loadConfig(path.join(root,'ai-companion-kit/packages/companion/config.json'));
+// Optional paid live-model check. For zero model cost use qzone-autonomy-check.mjs.
+const now=Date.parse('2026-10-23T12:00:00+08:00');
+const validation={...cfg,autonomy:{...cfg.autonomy,dryRun:true,chat:{...cfg.autonomy.chat,enabled:true},qzone:{...cfg.autonomy.qzone,enabled:true,publishEnabled:true,readOwnerEnabled:true}}};
+const a=new Autonomy({cfg:validation,role:new Role({cardPath:cfg.roleCard}),memory:new Memory({dir:path.join(root,'data/validation/autonomy-memory')}),bot:{connected:true,send:async()=>{throw new Error('Must not send in dry run');}},now:()=>now,reload:false,stateFile:path.join(root,'data/validation/autonomy-live-'+Date.now()+'.json')});
+const local=localTime(now);a.plan(local);
+a.state.chat.nextDecisionAt=now;a.save();
+const decisions=[];a.decision=async(kind,context)=>{const result=await a.generate(kind,context);decisions.push({kind,action:result.action,validStructure:['send','skip'].includes(result.action),textLength:result.text?.length||0});return result;};
+a.space.decide=async(context,images)=>{const result=await a.space.generate(context,images);decisions.push({kind:'qzone',action:result.action,validStructure:['post','skip'].includes(result.action),textLength:result.text?.length||0});return result;};
+await a.tick();assert.equal(decisions.length,2);assert(decisions.every(d=>d.validStructure));assert.equal(a.state.attempts.length,0);
+assert(a.state.chat.lastDecision);assert.equal(a.space.state.attempts.length,0);assert(a.space.state.lastPoll.ok);
+const receipt={at:new Date().toISOString(),model:cfg.model,mode:'real API decisions + simulated clock + actual Qzone read + dry run',decisions,actualMessagesSent:0,actualPostsPublished:0};
+fs.writeFileSync(path.join(root,'logs/autonomy-live-check.json'),JSON.stringify(receipt,null,2));console.log(JSON.stringify(receipt));

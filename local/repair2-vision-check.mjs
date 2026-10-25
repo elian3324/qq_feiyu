@@ -1,0 +1,22 @@
+// Real configured model and actual image preparation/Brain path. Never sends a QQ message.
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {loadConfig} from '../ai-companion-kit/packages/companion/src/index.js';
+import {Brain} from '../ai-companion-kit/packages/companion/src/brain.js';
+import {Memory} from '../ai-companion-kit/packages/companion/src/memory.js';
+import {Role} from '../ai-companion-kit/packages/companion/src/role.js';
+import {Multimedia} from './multimedia.mjs';
+import {auditRequest,auditResponse} from './request-audit.mjs';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const cfg=loadConfig(path.join(root,'ai-companion-kit/packages/companion/config.json'));
+assert.equal(cfg.model,'deepseek-v4.1-flash');
+const prepared=await new Multimedia(cfg).prepareMessages([{raw:[{type:'image',data:{file:path.join(root,'local/fixtures/vision-test.png')}}]}],{});
+assert.equal(prepared.media.length,1);
+const brain=new Brain({...cfg,role:new Role({cardPath:cfg.roleCard}),memory:new Memory({dir:path.join(root,'data/validation/repair2-vision')}),toolProvider:{list:async()=>[],auditRequest,auditResponse}});
+const result=await brain.reply({key:'private:'+cfg.ownerIds[0],userId:cfg.ownerIds[0],record:false,text:'请根据实际图片回答：测试编号、左右图形及颜色分别是什么？',media:prepared.media});
+const receipt={at:new Date().toISOString(),model:result.raw.model,requestId:result.raw.id,usage:result.raw.usage,output:result.text,passed:/2479/.test(result.text)&&/红/.test(result.text)&&/蓝/.test(result.text)&&/方/.test(result.text)&&/圆/.test(result.text),scope:'Real configured API through actual Multimedia and Brain; fixture only; no QQ sends'};
+fs.writeFileSync(path.join(root,'logs/repair2-vision.json'),JSON.stringify(receipt,null,2));
+console.log(JSON.stringify(receipt));
+assert(receipt.passed,'Real image understanding failed');

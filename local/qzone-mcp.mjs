@@ -41,4 +41,11 @@ tool('qzone_recent_like','根据昵称或 QQ 查找最近动态并点赞；昵�
   if(new Set(hits.map(f=>f.uin)).size!==1) throw new Error('昵称匹配到多人，请指定 QQ 号');
   const hit=hits[0];await api.call('like_qzone',{tid:hit.key,target_uin:hit.uin,abstime:hit.time});return {liked:true,tid:hit.key};
 });
-await server.connect(new StdioServerTransport());
+if(process.argv.includes('--selftest')){
+  console.log('空间功能已配置启用：'+(cfg.qzone?.enabled===true));
+  console.log('网关 Token 已配置：'+Boolean(cfg.qzone?.accessToken||cfg.onebot?.accessToken));
+  if(cfg.qzone?.enabled===true&&(cfg.qzone?.accessToken||cfg.onebot?.accessToken)){
+    try{const data=await api.call('get_qzone_msg_list',{num:1});console.log('空间读取连通；条数：'+(Array.isArray(data?.msglist)?data.msglist.length:0));}
+    catch{console.log('空间读取失败，请核对自己的网关能力、授权适配器和配置。');process.exitCode=1;}
+  }
+}else await server.connect(new StdioServerTransport());

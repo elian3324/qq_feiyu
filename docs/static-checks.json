@@ -1,12 +1,18 @@
 {
   "status": "PASS",
   "checks": {
-    "files": 87,
-    "json_parsed": 17,
-    "python_ast_parsed": 2,
-    "javascript_syntax_parsed": 47,
-    "required_files": 13,
-    "gitignore_cases": 35
+    "local_git_metadata_skipped": true,
+    "files": 438,
+    "json_parsed": 31,
+    "python_ast_parsed": 3,
+    "javascript_syntax_parsed": 253,
+    "html_script_blocks_parsed": 4,
+    "powershell_ast_parsed": 14,
+    "required_files": 19,
+    "source_files_accounted": 399,
+    "npm_entrypoints_accounted": 68,
+    "batch_entrypoints_checked": 34,
+    "gitignore_cases": 45
   },
   "issues": [],
   "scope": "static file parsing only; no project execution, installation or network access"

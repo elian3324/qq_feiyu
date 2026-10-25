@@ -16,6 +16,7 @@ export function applyEnvironment(config, env = process.env) {
   cfg.qzone = { ...cfg.qzone,
     httpUrl: env.QZONE_HTTP_URL || cfg.qzone?.httpUrl || '',
     accessToken: env.QZONE_ACCESS_TOKEN || cfg.qzone?.accessToken || '',
+    protocolModule: env.QZONE_PROTOCOL_MODULE || cfg.qzone?.protocolModule || '',
   };
   return cfg;
 }

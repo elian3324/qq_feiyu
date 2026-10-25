@@ -1,0 +1,18 @@
+MCP空间配置.json -> MCP空间配置.example.json | 模板公开；初始化时生成本机路径和自己的配置
+MCP配置.json -> MCP配置.example.json | 模板公开；初始化时生成本机路径和自己的配置
+ai-companion-kit/packages/companion/config.json -> ai-companion-kit/packages/companion/config.example.json | 真实凭据、账号、路径不复制；由模板在本地初始化
+ai-companion-kit/packages/companion/role.md -> ai-companion-kit/packages/companion/role.example.md | 私人角色或备份不公开，使用中立可替换模板
+ai-companion-kit/packages/companion/role.md.bak-features -> ai-companion-kit/packages/companion/role.example.md | 私人角色或备份不公开，使用中立可替换模板
+local/features-settings.json -> local/features-settings.example.json | 设备序列号与本机信息改为空模板
+local/verification-status.json -> docs/static-checks.json | 历史运行验收不移植，使用本次真实静态结果
+qq-bridge/_snowluma-catalog.json -> qq-bridge/src/onebot-client.js | 受限第三方目录快照不分发；自有 OneBot 传输和安全 MCP 替代实际用到的接口
+qq-bridge/roles/傲娇助手.md -> qq-bridge/roles/default.example.md | 私人角色或备份不公开，使用中立可替换模板
+qq-bridge/roles/[private-name].md -> qq-bridge/roles/default.example.md | 私人角色或备份不公开，使用中立可替换模板
+[目录类别] 个人/授权未逐项确认的媒体及测试资源 | 24 个文件 | 详见 FILE_PARITY.md
+[目录类别] 依赖安装副本 | 9025 个文件 | 详见 FILE_PARITY.md
+[目录类别] 原 Git 历史与元数据 | 221 个文件 | 详见 FILE_PARITY.md
+[目录类别] 受限空间协议实现与随附许可文件 | 3 个文件 | 详见 FILE_PARITY.md
+[目录类别] 打包运行环境、下载包和第三方源码 | 1956 个文件 | 详见 FILE_PARITY.md
+[目录类别] 私人备份与旧版本数据 | 9 个文件 | 详见 FILE_PARITY.md
+[目录类别] 私人消息、记忆、空间/媒体记录、日志与状态 | 563 个文件 | 详见 FILE_PARITY.md
+[目录类别] 第三方网关、QQ/原生组件、登录与运行数据 | 2516 个文件 | 详见 FILE_PARITY.md

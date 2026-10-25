@@ -8,8 +8,13 @@
     "packages/*"
   ],
   "scripts": {
-    "phone": "node packages/phone-mcp/src/phone-mcp.js",
-    "qzone": "node packages/qzone-mcp/src/qzone-mcp.js"
+    "demo": "node --env-file=../.env packages/companion/examples/demo.js",
+    "check": "node --env-file=../.env scripts/check.mjs",
+    "phone": "node --env-file=../.env packages/phone-mcp/src/phone-mcp.js",
+    "phone:test": "node --env-file=../.env packages/phone-mcp/src/phone-mcp.js --selftest",
+    "qzone": "node --env-file=../.env packages/qzone/open-zone.mjs",
+    "qzone:test": "node --env-file=../.env packages/qzone-mcp/src/qzone-mcp.js --selftest",
+    "qzone:mcp": "node --env-file=../.env packages/qzone-mcp/src/qzone-mcp.js"
   },
   "keywords": [
     "ai",

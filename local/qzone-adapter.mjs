@@ -32,6 +32,17 @@ export class QzoneAdapter {
     if(!cookies.p_skey && !cookies.skey) throw new Error('QQ 网关尚未提供有效的空间登录凭据');
     this.credentials=cookies;this.credentialsAt=Date.now();return cookies;
   }
+  async protocol() {
+    if(this.cfg.qzone?.enabled!==true)throw new Error('QQ 空间未启用');
+    const configured=this.cfg.qzone?.protocolModule;
+    if(!configured)return null;
+    if(!this.protocolPromise){
+      const file=path.resolve(configured);
+      if(!fs.statSync(file).isFile())throw new Error('请提供自己获得授权的本地空间协议适配器');
+      this.protocolPromise=import(pathToFileURL(file).href);
+    }
+    return this.protocolPromise;
+  }
   limit(kind) {
     const lockFile=new URL('qzone-rate.lock',this.stateDir);let lock;
     try {lock=fs.openSync(lockFile,'wx');fs.writeFileSync(lock,String(process.pid));}
@@ -60,9 +71,16 @@ export class QzoneAdapter {
   }
   async call(action,args={}) {
     const self=String(this.cfg.botQQ);
-    if(action==='get_qzone_msg_list') return this.onebot(action,{...args,target_uin:String(args.target_uin||self),pos:0,num:Math.min(20,args.num||5)});
-    if(action==='get_qzone_feeds') return this.onebot(action,{...args,count:Math.min(20,args.count||8)});
-    if(action==='get_qzone_msg_detail') return this.onebot(action,{...args,target_uin:String(args.target_uin||self),pos:Math.max(0,Number(args.pos)||0),num:Math.min(50,Number(args.num)||20)});
+    const protocol=await this.protocol();
+    if(action==='get_qzone_msg_list') return protocol
+      ? protocol.getQzoneMsgList(await this.auth(),String(args.target_uin||self),0,Math.min(20,args.num||5))
+      : this.onebot(action,{...args,target_uin:String(args.target_uin||self),pos:0,num:Math.min(20,args.num||5)});
+    if(action==='get_qzone_feeds') return protocol
+      ? protocol.getQzoneFeeds(await this.auth(),self,1,Math.min(20,args.count||8))
+      : this.onebot(action,{...args,count:Math.min(20,args.count||8)});
+    if(action==='get_qzone_msg_detail') return protocol
+      ? protocol.getQzoneMsgDetail(await this.auth(),String(args.target_uin||self),String(args.tid),Math.max(0,Number(args.pos)||0),Math.min(50,Number(args.num)||20))
+      : this.onebot(action,{...args,target_uin:String(args.target_uin||self),pos:Math.max(0,Number(args.pos)||0),num:Math.min(50,Number(args.num)||20)});
     let result;
     if(action==='send_qzone_msg') {
       if(!String(args.content||'').trim()) throw new Error('说说正文不能为空');
@@ -77,12 +95,17 @@ export class QzoneAdapter {
       result=await this.onebot(action,{...args,ugc_right:args.ugc_right??4});
       if(typeof result?.tid!=='string'||!result.tid||result.tid.length>256) throw new Error('空间发布未返回有效 tid，请先查看空间，勿重复发布');
     } else if(action==='like_qzone') {
-      this.limit('like');result=await this.onebot(action,{...args,target_uin:String(args.target_uin||self)});
+      this.limit('like');
+      result=protocol
+        ? await protocol.setQzoneLike(await this.auth(),self,String(args.target_uin||self),String(args.tid),true,Number(args.abstime||0))
+        : await this.onebot(action,{...args,target_uin:String(args.target_uin||self)});
     } else if(action==='comment_qzone'||action==='reply_qzone') {
       const reply=action==='reply_qzone'?{commentId:args.comment_id,uin:args.reply_uin}:undefined;
       if(reply&&(!String(reply.commentId??'')||!/^[1-9]\d*$/.test(String(reply.uin))))throw new Error('回复缺少可信的评论或接收者');
       if(!String(args.content||'').trim()||String(args.content).length>600)throw new Error('空间评论内容无效');
-      this.limit('comment');result=await this.onebot(action,{...args,target_uin:String(args.target_uin||self)});
+      this.limit('comment');result=protocol
+        ? await protocol.commentQzoneMsg(await this.auth(),self,String(args.target_uin||self),String(args.tid),String(args.content),undefined,undefined,reply)
+        : await this.onebot(action,{...args,target_uin:String(args.target_uin||self)});
     } else throw new Error('不支持的空间操作');
     fs.appendFileSync(this.auditFile,JSON.stringify({t:new Date().toISOString(),action,tid:result?.tid||args.tid||'',visibility:args.ugc_right??4})+'\n');
     return result;

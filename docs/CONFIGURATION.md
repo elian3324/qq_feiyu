@@ -22,7 +22,7 @@ OneBot 的三个非空环境变量覆盖 JSON 的 `onebot.wsUrl/httpUrl/accessTo
 | 字段 | 说明 |
 | --- | --- |
 | `botQQ` | 自己的机器人 QQ，字符串 |
-| `ownerIds` | 主人/管理员平台 ID 数组；权限按 ID 核验 |
+| `ownerIds` | 管理员/管理员平台 ID 数组；权限按 ID 核验 |
 | `allow.private` / `allow.groups` | 明确允许处理的私聊与群。空白模板无法从根启动入口运行 |
 | `names` / `keywords` | 可替换的机器人名称和唤醒词 |
 | `wake.groupAtOnly` | 默认群聊要求 @；管理员免 @ 可单独配置 |
@@ -69,6 +69,6 @@ OneBot 的三个非空环境变量覆盖 JSON 的 `onebot.wsUrl/httpUrl/accessTo
 
 ## 运行与隐私
 
-根启动器仅运行本目录机器人，不管理 QQ 或网关进程。不再附带原项目的自动安装、原生组件补丁、扫码登录、停止全部或本机电源管理脚本。恢复连接由现有 OneBot 客户端负责。
+根启动器只运行本目录机器人。原有配置 GUI、启停、日记、自主行为、手机、电源管理、连接监督及可公开原生适配源码均已恢复，入口见 [SCRIPTS.md](SCRIPTS.md)。第三方程序需用户另行获得授权；网关可使用显式本地启动配置，原生高级工具见 [ADVANCED_INTEGRATION.md](ADVANCED_INTEGRATION.md)。
 
 请求审计会对文字、图片二进制和工具参数脱敏，但日志及记忆仍应统一作为私人文件。不要把运行后的工作目录当作发布目录；重新建立干净发布副本并运行静态审计。

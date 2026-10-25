@@ -1,0 +1,13 @@
+const path = require('node:path');
+const {pathToFileURL} = require('node:url');
+const {resolveGatewayRuntime} = require('../local/gateway-runtime.cjs');
+const base = process.env.COMPANION_GATEWAY_DIR || path.resolve(__dirname,'../gateway/napcat');
+if(process.env.COMPANION_ENABLE_NATIVE_TOOLS!=='1')throw new Error('Read docs/ADVANCED_INTEGRATION.md and explicitly enable authorized native integration.');
+const runtime = resolveGatewayRuntime(base);
+if (path.resolve(process.execPath).toLowerCase() !== runtime.node.toLowerCase()) throw new Error('QQ must use the selected bundle Node runtime');
+process.env.NAPCAT_WRAPPER_PATH = path.join(runtime.nativeDir, 'wrapper.node');
+process.env.NAPCAT_QQ_PACKAGE_INFO_PATH = path.join(runtime.nativeDir, 'package.json');
+process.env.NAPCAT_QQ_VERSION_CONFIG_PATH = path.join(runtime.nativeDir, 'config.json');
+process.env.NAPCAT_DISABLE_PIPE = '1';
+console.log('[runtime] QQ native version ' + runtime.version);
+import(pathToFileURL(path.join(base, 'napcat/napcat.mjs')).href);

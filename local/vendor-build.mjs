@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+import { stripTypeScriptTypes } from 'node:module';
+const base=new URL('../',import.meta.url);
+if(!process.env.QZONE_SOURCE_DIR||process.env.COMPANION_ENABLE_NATIVE_TOOLS!=='1')throw new Error('Provide your own authorized QZONE_SOURCE_DIR and enable native tools after reading the license.');
+const sourceRoot=pathToFileURL(path.resolve(process.env.QZONE_SOURCE_DIR)+path.sep);
+const source=new URL('packages/protocol/src/web/qzone.ts',sourceRoot);
+const out=new URL('local/vendor/',base);
+fs.mkdirSync(out,{recursive:true});
+let text=fs.readFileSync(source,'utf8');
+text=text.replace(/^import .*\n/gm,'');
+text=text.replace("const log = createLogger('Bridge.Web');","const log = {trace(){}, warn(){}};");
+const code=stripTypeScriptTypes(text,{mode:'strip'});
+fs.writeFileSync(new URL('qzone-protocol.mjs',out),'// Adapted for personal local use from SnowLuma protocol/web/qzone.ts.\n// Copyright SnowLumaDevs. See SnowLuma-LICENSE.txt; no native SnowLuma component is used.\nimport {RequestUtil,cookieToString,getBknFromCookie} from "../qzone-http.mjs";\n'+code);
+fs.copyFileSync(new URL('LICENSE',sourceRoot),new URL('SnowLuma-LICENSE.txt',out));
+console.log('Prepared local Qzone protocol adapter with source license.');
